@@ -12,23 +12,8 @@
       </div>
       <div class="col-6 text-center">
         <ul class="navbar-nav">
-          <li class="nav-item active">
-            <%= link_to "Home", root_path, class: "p-2 text-muted" %>
-          </li>
-          <li class="nav-item">
-            <%= link_to "About", about_me_path, class: "p-2 text-muted" %>
-          </li>
-          <li class="nav-item">
-            <%= link_to "Contact", contact_path, class: "p-2 text-muted" %>
-          </li>
-          <li class="nav-item">
-            <%= link_to "Blog", blogs_path, class: "p-2 text-muted" %>
-          </li>
-          <li class="nav-item">
-            <%= link_to "Portfolio", portfolios_path, class: "p-2 text-muted" %>
-          </li>
-          <li class="nav-item">
-            <%= login_helper 'p-2 text-muted' %>
+          <%= nav_helper 'nav-link', 'li'%>
+          <%= login_helper 'p-2 text-muted' %>
           </li>
           <li class="nav-item">
             <%= link_to 'Write a New Blog', new_blog_path, class: "p-2 text-muted" if logged_in?(:site_admin) %>
