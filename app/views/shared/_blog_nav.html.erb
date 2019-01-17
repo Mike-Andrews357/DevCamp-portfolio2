@@ -15,9 +15,6 @@
           <%= nav_helper 'nav-link', 'li'%>
           <%= login_helper 'p-2 text-muted' %>
           </li>
-          <li class="nav-item">
-            <%= link_to 'Write a New Blog', new_blog_path, class: "p-2 text-muted" if logged_in?(:site_admin) %>
-          </li>
         </ul>
       </div>
     </div>
