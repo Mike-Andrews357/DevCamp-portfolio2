@@ -5,6 +5,12 @@
 @import "jquery-ui";
 @import "gritter";
 
+
+html,
+body {
+  height: 100%;
+  font-family: 'Raleway', sans-serif;
+}
 .jumbotron {
   padding-top: 3rem;
   padding-bottom: 3rem;
@@ -44,4 +50,17 @@ footer p {
 
 .portfolio-container {
   padding-top: 30px;
+}
+
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3 h4,
+.h4 h5,
+.h5,
+h6,
+.h6 {
+  font-family: 'Roboto', sans-serif;
 }
