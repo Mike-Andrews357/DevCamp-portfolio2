@@ -1,27 +1,20 @@
-
-
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-  
+<div class="container">
+  <nav class="navbar navbar-expand-lg navbar-light bg-light blog-nav"> 
+    <%= link_to "Mike Andrews", root_path, class: 'navbar-brand' %> 
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
     
-       
-        <a class="navbar-brand" href="#">Mike's Blogs</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-      </div>
-      <div class="col-6 text-center">
-        <ul class="navbar-nav">
-          <%= nav_helper 'nav-link', 'li'%>
-          <%= login_helper 'p-2 text-muted' %>
-          </li>
-          <li class="nav-item">
-            <%= link_to 'Write a New Blog', new_blog_path, class: "p-2 text-muted" if logged_in?(:site_admin) %>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</nav>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+        <%= nav_helper 'nav-link', 'li'%>
+        <%= login_helper 'nav-link' %>
+      </ul>
+    </div>       
+  </nav>
+</div>
 
  
+
+        
+      

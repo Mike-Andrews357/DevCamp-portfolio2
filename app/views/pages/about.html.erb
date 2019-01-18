@@ -1,16 +1,102 @@
-<main role="main" class="inner cover">
+<div class="app-card-container">
+  <div class="card">
+    
     <h1 class="cover-heading">Mike's Story</h1>
 
     <hr>
 
     <div class="row">
-      <div class="col-md-5">
-        <%= image_tag "couple.jpg", width: 300, alt: "happy couple" %>
+      <div class="col-md-4">
+        <%= image_tag "couple.jpg", width: 250, alt: "happy couple", class: 'profile-img' %>
+        <div class="skills">
+          <% @skills.each do |skill| %>
+            <div class="skill">
+              <h4><%= skill.title %></h4>
+              <div class="progress">
+                <div 
+                  class="progress-bar progress-bar-striped bg-warning"
+                  role="progressbar"
+                  aria-valuenow="<%= skill.percent_utilized %>"
+                  aria-valuemax="100"
+                  style="width: <%= skill.percent_utilized %>%"
+                  >
+                </div>
+              </div> 
+            </div>
+          
+          <% end %>
+        </div>
       </div>
-      <div class="col-md-7">
-        <p class="lead">I grew up in a small northern town and had many opportunities as I grew older.  I put myself through college working summers and part time at the Paper mill.  After college I got an apprentship with Ontario Hydro and worked my way up the ladder to be a Supervisor.  After 32 years I decided the daily struggles were not getting me where I wanted to be so I put in my retirement papers.  Retirement was much more exciting to me and I worked on the projects that gave me the most return for my labours.</p>
-        <p>I built 3 new shooting ranges at the Rockcut Shooting club and worked on getting new action shooting sports established at the club.  Buying a small Kubota tractor with a backhoe attachment kept me busy on many side projects working for others.  Having more spare time in the winters I delved into computer programming and web development. It has stretched my mind learning new skills and I also taught myself to weld and have built some items for the Rockcut Shooting club such as tables and rifle racks. </p>
+      
+      <div class="col-md-8">
+        <p class="lead">I grew up in a small northern town and had many opportunities as I grew older.  I put myself through college working summers and part time at the Paper mill.  After college I got an apprentiship with Ontario Hydro and worked my way up the ladder to be a Supervisor.  After 32 years I decided the daily struggles were not getting me where I wanted to be so I put in my retirement papers.  Retirement was much more exciting to me and I worked on the projects that gave me the most return for my labours.</p>
+        <p>I designed and built 3 new shooting ranges at the Rockcut Shooting club and worked on getting new action shooting sports established at the club.  Buying a small Kubota tractor with a backhoe attachment kept me busy on many side projects working for others.  Having more spare time in the winters I delved into computer programming and web development. It has stretched my mind learning new skills and I also taught myself to weld and have built some items for the Rockcut Shooting club such as tables and rifle racks. </p>
         <p class="lead"> Looking forward to the future and getting better at my favourite recreation activities.  Travelling to shooting matches and practicing at getting better in the sport.
+        </p>
+
+        <p>
+          <button
+            class="btn btn-primary"
+            type="button"
+            data-toggle="collapse"
+            data-target="#jobHistory"
+            aria-expanded="false"
+            aria-controls="jobHistory"
+          >
+            Job History          
+          </button>
+          <button
+            class="btn btn-primary"
+            type="button"
+            data-toggle="collapse"
+            data-target="#education"
+            aria-expanded="false"
+            aria-controls="education"
+          >
+            Education         
+          </button>
+        </p>
+        <p>
+          <div class="collapse" id="jobHistory">
+            <div class="card card-block">
+              Power Maintenance Electrician
+            </div>
+            <div class="card card-block">
+              Industrial Electrician
+            </div>
+            <div class="card card-block">
+              Trades Management Supervisor
+            </div>
+            <div class="card card-block">
+              Heavy Equipment Operator
+            </div>
+            <div class="card card-block">
+              Welding Fabricator
+            </div>
+            <div class="card card-block">
+              Web Developer
+            </div>
+            <div class="card card-block">
+              Programmer
+            </div>
+            <div class="card card-block">
+              Learning New Skills Everyday
+            </div>
+          </div>
+          <div class="collapse" id="education">
+            <div class="card card-block">
+              Electrical Engineering Technician  Northen College 1979 - 1981
+            </div>
+            <div class="card card-block">
+              Power Maintenance Electrician   1981 - 1985
+            </div>
+            <div class="card card-block">
+              Management Development Program Ontario Power Generation 1999 - 2013
+            </div>
+            <div class="card card-block">
+              Web Developer Training 2014 - present
+            </div>
+          </div>
         </p>
       </div>
     </div>
@@ -18,4 +104,8 @@
     <p class="lead">
     <%= link_to "About Me", about_me_path, class: 'btn btn-lg btn-secondary' %>
     </p>
-</main>
+
+  </div>
+</div>
+
+
